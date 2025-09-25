@@ -19,4 +19,6 @@ alias rsync_auh='rsync -auh --info=progress2 --exclude .git --exclude-from .giti
 alias space='df -H'
 
 # Add local bash aliases
-source ~/.bash_aliases.local
+if [ -f ~/.bash_aliases.local ]; then
+    source ~/.bash_aliases.local
+fi
