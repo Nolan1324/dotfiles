@@ -3,8 +3,8 @@ alias gs="git status"
 alias ga="git add"
 alias gcm="git commit -m"
 alias unstage="git restore --staged"
-alias gie="vim .git/info/exclude"
-alias gieu="git ls-files --others --exclude-standard --directory --no-empty-directory >> .git/info/exclude"
+alias gie='vim $(git rev-parse --show-toplevel)/.git/info/exclude'
+alias gieu='git ls-files --others --exclude-standard --directory --no-empty-directory >> $(git rev-parse --show-toplevel)/.git/info/exclude'
 alias gpr="git pull --rebase"
 
 # Docker
